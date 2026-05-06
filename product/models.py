@@ -33,7 +33,7 @@ class Product(models.Model):
 
         total = sum(i.stars for i in reviews)
         return total / reviews.count()
-        
+
     
 class Review(models.Model):
     text = models.CharField()

@@ -31,6 +31,9 @@ class ProductListSerializer(serializers.ModelSerializer):
     def get_rating(self,rating):
         return rating.product_rating()
 
+    def get_negative_reviews(self,obj):
+        return obj.negative_reviews()
+
 
 class ProductDetailSerializer(serializers.ModelSerializer):
     class Meta:
