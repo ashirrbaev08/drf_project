@@ -35,6 +35,11 @@ class ProductListSerializer(serializers.ModelSerializer):
     def get_negative_reviews(self,obj):
         return obj.negative_reviews()
 
+class ProductCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields = ['category','title','price']
+
 
 class ProductDetailSerializer(serializers.ModelSerializer):
     class Meta:
